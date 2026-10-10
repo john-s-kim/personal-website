@@ -3,91 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Kim</title>
+    <title>John Kim — Systems, infrastructure & ideas</title>
+    <meta name="description" content="John Kim, a computer science student at Georgia Tech interested in distributed systems and infrastructure. Work, projects, and writing.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="home" id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="container">
-        <header>
-            <nav>
-                <a href="#" class="nav-link">Home</a>
-                <a href="#work" class="nav-link">Work & Projects</a>
-                <a href="#writing" class="nav-link">Writing</a>
-                <a href="mailto:kimjohndev@gmail.com" class="nav-link">Contact</a>
-            </nav>
-        </header>
-
-        <main>
-            <section class="intro">
-                <h1>John Kim</h1>
-                <p>Computer Science student at Georgia Tech interested in distributed systems and infrastructure.</p>
+        <main id="main">
+            <section class="intro" aria-labelledby="intro-heading">
+                <figure class="landscape">
+                    <img src="images/power-lines-dithered.png" width="2172" height="724" alt="Transmission towers and cables over a distant industrial skyline at dusk, rendered in bold black-and-white pixel dithering.">
+                    <figcaption><span>Systems, infrastructure & ideas</span><span aria-hidden="true">░▒▓█</span></figcaption>
+                </figure>
+                <div class="intro-copy"><h1 id="intro-heading">John Kim</h1>
+                    <p>I'm a CS student at Georgia Tech. I like distributed systems and infrastructure, and until May I taught data structures to a lot of people.</p>
+                </div>
             </section>
 
             <section id="work" class="work">
-                <h2>Work & Projects</h2>
+                <h2><span class="section-number">01</span> Work & experience</h2>
                 
-                <div class="experience">
-                    <h3>Current</h3>
-                    <ul>
-                        <li>
-                            <strong>Teaching Assistant, Georgia Tech (CS 1332)</strong> — Jan 2025–Present<br>
-                            Teaching Data Structures & Algorithms. Supporting 1100+ students, holding office hours, and maintaining the visualization tool <a href="http://csvistool.com" target="_blank">csvistool.com</a> (1000+ daily users).
-                        </li>
-                        <li>
-                            <strong>Software Engineer Intern, Databricks</strong> — Summer 2026<br>
-                            Incoming Software Engineer Intern on the Code and CI team working on release infrastructure.
-                        </li>
-                    </ul>
-                </div>
-
                 <div class="experience">
                     <h3>Previous</h3>
                     <ul>
                         <li>
-                            <strong>Software Development Engineer Intern, Amazon</strong> — May–Aug 2025<br>
-                            Accomplished hydration and enrichment of over $50M of digital transaction data per year using AWS Lambda. Achieved 99.99% accuracy on tax linkage for 12 transactions/second using SQL, Athena, and Glue. Enhanced tax insights for 10M+ transactions with React.
+                            <strong>Software Engineer Intern, Databricks</strong> — May 2026–August 2026<br>
+                            Worked on the Code & CI team on release infrastructure.
+                        </li>
+
+                        <li>
+                            <strong>Teaching Assistant, Georgia Tech (CS 1332)</strong> — Jan 2025–May 2026<br>
+                            Taught Data Structures & Algorithms to classes of 1100+. Held office hours and maintained <a href="http://csvistool.com" target="_blank" rel="noopener noreferrer">csvistool.com</a>, the visualizer most of the class studies with — about 1000 people use it a day.
                         </li>
                         <li>
-                            <strong>Design for Testability Team Member, Silicon Jackets</strong> — Aug–Dec 2024<br>
-                            Contributed to debugging RISC-V CPU modules and enhancing system reliability for the club's inaugural $40,000 CPU tape-out.
+                            <strong>Software Development Engineer Intern, Amazon</strong> — May–Aug 2025<br>
+                            Worked on the pipeline that enriches $50M/year of transaction data (AWS Lambda). Got tax linkage to 99.99% accuracy at 12 transactions/second with Athena and Glue, then built the React views that surface those tax insights across 10M+ transactions. Wrote about it <a href="writing/Lessons-From-Interning-At-Amazon.html">here</a>.
                         </li>
                     </ul>
                 </div>
 
-                <div class="projects">
-                    <h3>Projects</h3>
+            </section>
+
+            <section id="projects" class="projects">
+                <h2><span class="section-number">02</span> Selected projects</h2>
                     <ul>
                         <li>
-                            <strong><a href="https://architect-design-ai.vercel.app/" target="_blank">Architect Design AI</a></strong><br>
-                            System design whiteboard tool for creating and visualizing software architecture diagrams. Graded with AI!
+                            <strong><a href="https://architect-design-ai.vercel.app/" target="_blank" rel="noopener noreferrer">Architect Design AI</a></strong><br>
+                            A whiteboard for system design. You draw the architecture, AI grades it.
                         </li>
                         <li>
-                            <strong><a href="http://csvistool.com" target="_blank">Data Structures Visualization Tool</a></strong><br>
-                            Interactive tool for visualizing complex algorithms. Used by nearly every CS1332 student at Georgia Tech. Built with JavaScript, HTML5 Canvas, and CSS3.
+                            <strong><a href="http://csvistool.com" target="_blank" rel="noopener noreferrer">Data Structures Visualization Tool</a></strong><br>
+                            Animates data structures and algorithms step by step. Nearly every CS 1332 student at Georgia Tech uses it. Plain JavaScript and Canvas — no framework.
                         </li>
                         <li>
                             <strong>Boovie</strong><br>
-                            Full-stack AI app converting book PDFs into 30-second movie trailers using Gemini, Imagen, and RunwayML. Presented to Google's AI leadership. Built with Python, React, and Google AI APIs.
+                            Turns a book PDF into a 30-second movie trailer using Gemini, Imagen, and RunwayML. We got to present it to Google's AI leadership.
                         </li>
                     </ul>
-                </div>
             </section>
 
             <section id="writing" class="writing">
-                <h2>Writing</h2>
+                <h2><span class="section-number">03</span> Writing</h2>
                 <ul>
-                    <li><a href="writing/2026-Goals.html">2026 Goals</a> — Dec 31, 2025</li>
-                    <li><a href="writing/Lessons-From-Interning-At-Amazon.html">Lessons while interning @ Amazon</a> — Dec 15, 2025</li>
+                    <li><a href="writing/2026-Goals.html">2026 Goals <span aria-hidden="true">↗</span></a><time datetime="2025-12-31">Dec 31, 2025</time></li>
+                    <li><a href="writing/Lessons-From-Interning-At-Amazon.html">Lessons while interning @ Amazon <span aria-hidden="true">↗</span></a><time datetime="2025-12-15">Dec 15, 2025</time></li>
                 </ul>
             </section>
         </main>
 
         <footer>
-            <p>
-                <a href="mailto:kimjohndev@gmail.com">Email</a> •
-                <a href="https://github.com/seungjinjkim" target="_blank">GitHub</a> •
-                <a href="https://www.linkedin.com/in/seungjinkim05/" target="_blank">LinkedIn</a> •
-                <a href="https://x.com/im_john_k" target="_blank">Twitter</a>
+            <p class="footer-note">Thanks for stopping by.<span class="footer-signature">John Kim / Personal site</span></p>
+            <p class="social-links">
+                <a href="mailto:kimjohndev@gmail.com">Email</a>
+                <a href="https://github.com/seungjinjkim" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/seungjinkim05/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://x.com/im_john_k" target="_blank" rel="noopener noreferrer">Twitter</a>
             </p>
         </footer>
     </div>
