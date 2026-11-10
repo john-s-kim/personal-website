@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Kim</title>
-    <meta name="description" content="John Kim, a computer science student at Georgia Tech interested in distributed systems and infrastructure. Work, projects, and writing.">
+    <meta name="description" content="John Kim's website">
     <link rel="stylesheet" href="css/styles.css">
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -13,78 +13,140 @@
 </head>
 <body class="home" id="top">
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="container">
+
+    <header class="runbar">
+        <div class="wrap">
+            <a class="repo" href="#top">john-kim<span> / main</span></a>
+            <nav aria-label="Sections">
+                <a href="#pipeline">pipeline</a>
+                <a href="#artifacts">artifacts</a>
+                <a href="#notes">notes</a>
+                <a href="#notify">notify</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrap">
         <main id="main">
-            <section class="intro" aria-labelledby="intro-heading">
+            <section class="hero" aria-labelledby="intro-heading">
                 <figure class="landscape">
-                    <img src="images/power-lines-dithered.png" width="2172" height="724" alt="Transmission towers and cables over a distant industrial skyline at dusk, rendered in bold black-and-white pixel dithering.">
+                    <img src="images/han-river-dither.png" width="720" height="240" alt="The Han River in Seoul with the 63 Building and the Yeouido skyline under large clouds, rendered in black-and-white pixel dithering.">
                     <figcaption><span>interested in systems and infrastructure</span><span aria-hidden="true">░▒▓█</span></figcaption>
                 </figure>
-                <div class="intro-copy"><h1 id="intro-heading">John Kim</h1>
+                <div class="hero-copy">
+                    <div>
+                        <h1 id="intro-heading">John Kim</h1>
+                        <p class="run-meta">branch main<br><b>3 passed</b> · 1 running · 1 queued</p>
+                    </div>
                     <p>I currently study at Georgia Tech, with a focus in information and system architectures. I'll also be doing my master's in Machine Learning.</p>
                 </div>
             </section>
 
-            <section id="work" class="work">
-                <h2><span class="section-number">01</span> Work & experience</h2>
-                
-                <div class="experience">
-                    <h3>Previous</h3>
-                    <ul>
-                        <li>
-                            <strong>Software Engineer Intern, Databricks</strong> — May 2026–August 2026<br>
-                            Worked on the Code & CI team on release infrastructure.
-                        </li>
+            <section id="pipeline" aria-labelledby="pipeline-heading">
+                <h2 id="pipeline-heading"><span class="step">01</span> Pipeline <span class="tally">work &amp; experience</span></h2>
 
-                        <li>
-                            <strong>Teaching Assistant, Georgia Tech (CS 1332)</strong> — Jan 2025–May 2026<br>
-                            Hosted office hours, gave lecture recitations, and graded projects &amp; homeworks.
-                        </li>
-                        <li>
-                            <strong>Software Development Engineer Intern, Amazon</strong> — May–Aug 2025<br>
-                            Worked on the pipeline that enriches $50M/year of transaction data (AWS Lambda). Got tax linkage to 99.99% accuracy at 12 transactions/second with Athena and Glue, then built the React views that surface those tax insights across 10M+ transactions. Wrote about it <a href="writing/Lessons-From-Interning-At-Amazon.html">here</a>.
-                        </li>
-                    </ul>
+                <ul class="stages" role="tablist" aria-label="Career stages">
+                    <li class="passed"><button class="stage" role="tab" id="tab-amazon" aria-controls="log-amazon" aria-selected="false"><span class="stage-name"><span class="dot"></span>amazon</span><span class="stage-time">May–Aug 2025</span></button></li>
+                    <li class="passed"><button class="stage" role="tab" id="tab-ta" aria-controls="log-ta" aria-selected="false"><span class="stage-name"><span class="dot"></span>cs1332-ta</span><span class="stage-time">Jan 2025–May 2026</span></button></li>
+                    <li class="passed"><button class="stage" role="tab" id="tab-databricks" aria-controls="log-databricks" aria-selected="true"><span class="stage-name"><span class="dot"></span>databricks</span><span class="stage-time">May–Aug 2026</span></button></li>
+                    <li class="running"><button class="stage" role="tab" id="tab-gatech" aria-controls="log-gatech" aria-selected="false"><span class="stage-name"><span class="dot"></span>gatech</span><span class="stage-time">running</span></button></li>
+                    <li class="queued"><button class="stage" role="tab" id="tab-ms" aria-controls="log-ms" aria-selected="false"><span class="stage-name"><span class="dot"></span>ms-ml</span><span class="stage-time">queued</span></button></li>
+                </ul>
+
+                <div class="log" role="tabpanel" id="log-amazon" aria-labelledby="tab-amazon">
+                    <div class="log-head"><span><strong>Software Development Engineer Intern</strong>, Amazon</span><span>passed · May–Aug 2025</span></div>
+                    <div class="log-body">
+                        <p class="cmd">$ run enrich-transactions --runtime aws-lambda</p>
+                        <p>Worked on the pipeline that enriches $50M/year of transaction data.</p>
+                        <p>Got tax linkage to 99.99% accuracy at 12 transactions/second with Athena and Glue.</p>
+                        <p>Built the React views that surface those tax insights across 10M+ transactions.</p>
+                        <p class="res">✓ wrote it up: <a href="writing/Lessons-From-Interning-At-Amazon.html">Lessons while interning @ Amazon</a></p>
+                    </div>
                 </div>
 
+                <div class="log" role="tabpanel" id="log-ta" aria-labelledby="tab-ta">
+                    <div class="log-head"><span><strong>Teaching Assistant</strong>, Georgia Tech (CS 1332)</span><span>passed · Jan 2025–May 2026</span></div>
+                    <div class="log-body">
+                        <p class="cmd">$ run teach --course cs1332</p>
+                        <p>Hosted office hours.</p>
+                        <p>Gave lecture recitations.</p>
+                        <p>Graded projects and homeworks.</p>
+                        <p class="res">✓ done</p>
+                    </div>
+                </div>
+
+                <div class="log" role="tabpanel" id="log-databricks" aria-labelledby="tab-databricks">
+                    <div class="log-head"><span><strong>Software Engineer Intern</strong>, Databricks</span><span>passed · May–Aug 2026</span></div>
+                    <div class="log-body">
+                        <p class="cmd">$ run intern --team code-and-ci</p>
+                        <p>Worked on the Code &amp; CI team on release infrastructure.</p>
+                        <p class="res">✓ done</p>
+                    </div>
+                </div>
+
+                <div class="log" role="tabpanel" id="log-gatech" aria-labelledby="tab-gatech">
+                    <div class="log-head"><span><strong>Student</strong>, Georgia Tech</span><span>running</span></div>
+                    <div class="log-body">
+                        <p class="cmd">$ run study --focus information-and-system-architectures</p>
+                        <p>Studying computer science at Georgia Tech.</p>
+                        <p><span class="cursor" aria-hidden="true"></span></p>
+                    </div>
+                </div>
+
+                <div class="log" role="tabpanel" id="log-ms" aria-labelledby="tab-ms">
+                    <div class="log-head"><span><strong>M.S. Machine Learning</strong>, Georgia Tech</span><span>queued</span></div>
+                    <div class="log-body">
+                        <p class="cmd">$ run study --degree ms --focus machine-learning</p>
+                        <p>Waiting on the previous stage.</p>
+                    </div>
+                </div>
             </section>
 
-            <section id="projects" class="projects">
-                <h2><span class="section-number">02</span> Selected projects</h2>
-                    <ul>
-                        <li>
-                            <strong><a href="https://architect-design-ai.vercel.app/" target="_blank" rel="noopener noreferrer">Architect Design AI</a></strong><br>
-                            A whiteboard for system design. You draw the architecture, AI grades it.
-                        </li>
-                        <li>
-                            <strong><a href="http://csvistool.com" target="_blank" rel="noopener noreferrer">Data Structures Visualization Tool</a></strong><br>
-                            Animates data structures and algorithms step by step. Nearly every CS 1332 student at Georgia Tech uses it. Plain JavaScript and Canvas — no framework.
-                        </li>
-                        <li>
-                            <strong>Boovie</strong><br>
-                            Turns a book PDF into a 30-second movie trailer using Gemini, Imagen, and RunwayML. We got to present it to Google's AI leadership.
-                        </li>
-                    </ul>
+            <section id="artifacts" aria-labelledby="artifacts-heading">
+                <h2 id="artifacts-heading"><span class="step">02</span> Artifacts <span class="tally">selected projects</span></h2>
+                <ul class="artifacts">
+                    <li>
+                        <span class="file">artifact 1 of 3</span>
+                        <h3><a href="https://architect-design-ai.vercel.app/" target="_blank" rel="noopener noreferrer">Architect Design AI ↗</a></h3>
+                        <p>A whiteboard for system design. You draw the architecture, AI grades it.</p>
+                        <div class="tags"><span>system design</span><span>ai</span></div>
+                    </li>
+                    <li>
+                        <span class="file">artifact 2 of 3</span>
+                        <h3><a href="http://csvistool.com" target="_blank" rel="noopener noreferrer">Data Structures Visualization Tool ↗</a></h3>
+                        <p>Animates data structures and algorithms step by step. Nearly every CS 1332 student at Georgia Tech uses it.</p>
+                        <div class="tags"><span>javascript</span><span>canvas</span><span>no framework</span></div>
+                    </li>
+                    <li>
+                        <span class="file">artifact 3 of 3</span>
+                        <h3>Boovie</h3>
+                        <p>Turns a book PDF into a 30-second movie trailer. We got to present it to Google's AI leadership.</p>
+                        <div class="tags"><span>gemini</span><span>imagen</span><span>runwayml</span></div>
+                    </li>
+                </ul>
             </section>
 
-            <section id="writing" class="writing">
-                <h2><span class="section-number">03</span> Writing</h2>
-                <ul>
-                    <li><a href="writing/2026-Goals.html">2026 Goals <span aria-hidden="true">↗</span></a><time datetime="2025-12-31">Dec 31, 2025</time></li>
-                    <li><a href="writing/Lessons-From-Interning-At-Amazon.html">Lessons while interning @ Amazon <span aria-hidden="true">↗</span></a><time datetime="2025-12-15">Dec 15, 2025</time></li>
+            <section id="notes" aria-labelledby="notes-heading">
+                <h2 id="notes-heading"><span class="step">03</span> Release notes <span class="tally">writing</span></h2>
+                <ul class="notes">
+                    <li><span class="ver">v2025.12.31</span><a href="writing/2026-Goals.html">2026 Goals</a><time datetime="2025-12-31">Dec 31, 2025</time></li>
+                    <li><span class="ver">v2025.12.15</span><a href="writing/Lessons-From-Interning-At-Amazon.html">Lessons while interning @ Amazon</a><time datetime="2025-12-15">Dec 15, 2025</time></li>
                 </ul>
             </section>
         </main>
 
-        <footer>
-            <p class="footer-note">Thanks for stopping by.<span class="footer-signature">John Kim / Personal site</span></p>
-            <p class="social-links">
-                <a href="mailto:kimjohndev@gmail.com">Email</a>
-                <a href="https://github.com/seungjinjkim" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/seungjinkim05/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://x.com/im_john_k" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <footer id="notify">
+            <p>Thanks for stopping by.</p>
+            <p class="notify">
+                <span>notify:</span>
+                <a href="mailto:kimjohndev@gmail.com">email</a>
+                <a href="https://github.com/seungjinjkim" target="_blank" rel="noopener noreferrer">github</a>
+                <a href="https://www.linkedin.com/in/seungjinkim05/" target="_blank" rel="noopener noreferrer">linkedin</a>
+                <a href="https://x.com/im_john_k" target="_blank" rel="noopener noreferrer">twitter</a>
             </p>
         </footer>
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
